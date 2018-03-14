@@ -1,15 +1,21 @@
+import Pkg from '../../package'
+import ProdPlugin from '../plugins/products'
+import MongoPlug from '../plugins/mongo'
+
 /**
  * Loads plugins
  *
  * @param {Server} server
  * @returns {Promise}
  */
-export default async server => {
+export default async (server) => {
 
   const plugins = [
     { plugin: require('inert') },
     { plugin: require('vision') },
     { plugin: require('blipp') },
+    { plugin: MongoPlug},
+    { plugin: ProdPlugin},
     {
       plugin: require('good'),
       options: {
@@ -48,7 +54,7 @@ export default async server => {
         documentationPath: '/',
         info: {
           title: 'Example',
-          version: '1.0.0',
+          version: Pkg.version,
           description: 'An example api',
         },
       },

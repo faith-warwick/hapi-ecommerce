@@ -3,7 +3,7 @@ import Server from '../src'
 describe(`initial`, () => {
 
   let server
-  before(async () => {
+  beforeEach(async () => {
     server = await Server()
   })
 
