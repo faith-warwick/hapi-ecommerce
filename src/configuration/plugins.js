@@ -1,6 +1,7 @@
 import Pkg from '../../package'
-import ProdPlugin from '../plugins/products'
 import MongoPlug from '../plugins/mongo'
+import ProdPlugin from '../plugins/products'
+import UsersPlug from '../plugins/users'
 
 /**
  * Loads plugins
@@ -16,6 +17,7 @@ export default async (server) => {
     { plugin: require('blipp') },
     { plugin: MongoPlug},
     { plugin: ProdPlugin},
+    { plugin: UsersPlug},
     {
       plugin: require('good'),
       options: {

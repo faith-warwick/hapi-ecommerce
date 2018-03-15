@@ -1,5 +1,6 @@
 import { Server } from 'hapi'
 import ConfigurePlugins from './configuration/plugins'
+import Relish from'relish'
 
 const env = process.env.NODE_ENV || 'development'
 const port = process.env.PORT || 5000
@@ -13,12 +14,21 @@ const port = process.env.PORT || 5000
  */
 export default async () => {
 
+  const relish = Relish()
+
+
   const options = {
     router: {
       isCaseSensitive: false,
     },
     routes: {
       cors: true,
+      validate: {
+        failAction: relish.failAction,
+        options: {
+          abortEarly: false
+        }
+      }
     },
   }
 

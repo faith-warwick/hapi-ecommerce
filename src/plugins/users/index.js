@@ -10,12 +10,12 @@ export default {
 
     server.dependency(this.dependencies, server => {
       const { db } = server.plugins.mongo
-      const products = db.get('products')
+      const users = db.get('users')
 
       server.expose({
-        products
+        users
       })
 
       server.route(Routes)
     })
-} }
+  } }

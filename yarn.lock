@@ -1873,7 +1873,7 @@ hoek@2.x.x:
   version "2.16.3"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
 
-hoek@4.x.x:
+hoek@4.x.x, hoek@~4.2.0:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-4.2.1.tgz#9634502aa12c445dd5a7c5734b572bb8738aacbb"
 
@@ -3068,6 +3068,12 @@ regjsparser@^0.1.4:
   dependencies:
     jsesc "~0.5.0"
 
+relish@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/relish/-/relish-0.2.5.tgz#62c4d7c926b213614ec0cbb9f9b69d9e87221d32"
+  dependencies:
+    hoek "~4.2.0"
+
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz#c24bce2a283adad5bc3f58e0d48249b92379d8ef"
@@ -3119,6 +3125,10 @@ require-uncached@^1.0.3:
   dependencies:
     caller-path "^0.1.0"
     resolve-from "^1.0.0"
+
+require.js@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/require.js/-/require.js-1.0.0.tgz#71fa3273366af4427b0265a218be5e62ed4f90c8"
 
 require_optional@~1.0.0:
   version "1.0.1"
