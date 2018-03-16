@@ -1,0 +1,6 @@
+{
+  "env": {
+    "NODE_ENV": "production",
+    "MONGO_URI": "warwifg:Penguins1234@ds012578.mlab.com:12578/store-1"
+  }
+}

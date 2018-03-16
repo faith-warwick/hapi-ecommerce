@@ -7,13 +7,13 @@
     "start:dev": "babel-watch . --watch src",
     "prepublish": "npm run transpile",
     "test": "mocha test/**/*.test.js --compilers js:babel-register ",
-    "transpile": "babel src -d build -s inline"
+    "transpile": "babel src -d build -s inline --copy-files",
+    "deploy": "npm run transpile && now . --public --env MONGO_URI=warwifg:Penguins1234@ds012578.mlab.com:12578/store-1"
   },
   "keywords": [],
   "author": "",
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-polyfill": "^6.22.0",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.24.1",
     "code": "^5.1.2",
@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "babel-watch": "^2.0.7",
+    "babel-polyfill": "^6.22.0",
     "blipp": "^3.0.0",
     "boom": "^7.1.1",
     "good": "^8.0.0-rc1",
@@ -37,5 +38,8 @@
     "require.js": "^1.0.0",
     "tv": "^6.1.0",
     "vision": "^5.3.0"
+  },
+  "engines": {
+    "node": "9.8.0"
   }
 }
